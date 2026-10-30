@@ -1,0 +1,17 @@
+[Unit]
+Description=sigap-banser app (127.0.0.1:8088)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/sigap-banser
+Environment=PORT=8088
+Environment=PHP_CLI_SERVER_WORKERS=4
+ExecStart=%h/sigap-banser-watch/run.sh
+Restart=always
+RestartSec=5
+StandardOutput=append:%h/sigap-banser-watch/app.log
+StandardError=append:%h/sigap-banser-watch/app.log
+
+[Install]
+WantedBy=default.target

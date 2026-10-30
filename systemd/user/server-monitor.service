@@ -1,0 +1,13 @@
+[Unit]
+Description=Server Monitor Dashboard
+After=network.target
+
+[Service]
+EnvironmentFile=%h/server-monitor/.env
+Environment=TZ=Asia/Jakarta
+ExecStart=/usr/bin/python3 %h/server-monitor/monitor.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

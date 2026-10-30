@@ -1,0 +1,17 @@
+# Compose untuk layanan yang tidak punya repo sendiri (9router).
+# Tiga aplikasi utama punya compose masing-masing di repo-nya.
+services:
+  9router:
+    image: decolua/9router:latest
+    container_name: 9router
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:20128:20128"
+    environment:
+      INITIAL_PASS: ${ROUTER_INITIAL_PASS:?isi ROUTER_INITIAL_PASS di .env}
+      JWT_SECRET: ${ROUTER_JWT_SECRET:?isi ROUTER_JWT_SECRET di .env}
+      DATA_DIR: /app/data
+      NODE_ENV: production
+      PORT: 20128
+    volumes:
+      - /opt/9router/data:/app/data

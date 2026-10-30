@@ -1,0 +1,22 @@
+diff --git a/resources/views/laporan/index.blade.php b/resources/views/laporan/index.blade.php
+index d3a6f96..9082189 100644
+--- a/resources/views/laporan/index.blade.php
++++ b/resources/views/laporan/index.blade.php
+@@ -387,7 +387,7 @@
+                 <h3>Surat Masuk per Bulan</h3>
+             </div>
+             <div class="section-body bar-chart-wrapper">
+-                @php $maxM = max(array_values($masukPerBulan) + [1]); @endphp
++                @php $maxM = max([1, ...array_values($masukPerBulan)]); @endphp
+                 <div class="bar-chart">
+                     @foreach($masukPerBulan as $b => $val)
+                         <div class="bar-col">
+@@ -411,7 +411,7 @@
+                 <h3>Surat Keluar per Bulan</h3>
+             </div>
+             <div class="section-body bar-chart-wrapper">
+-                @php $maxK = max(array_values($keluarPerBulan) + [1]); @endphp
++                @php $maxK = max([1, ...array_values($keluarPerBulan)]); @endphp
+                 <div class="bar-chart">
+                     @foreach($keluarPerBulan as $b => $val)
+                         <div class="bar-col">

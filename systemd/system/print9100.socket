@@ -1,0 +1,7 @@
+[Unit]
+Description=Print listener port 9100 -> EpsonL120
+[Socket]
+ListenStream=9100
+Accept=yes
+[Install]
+WantedBy=sockets.target

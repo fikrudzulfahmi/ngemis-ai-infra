@@ -1,0 +1,4 @@
+# Kontrol antrian cetak dari dashboard server-monitor (host mode).
+# Pasang: sudo cp print-dashboard.sudoers /etc/sudoers.d/print-dashboard && sudo chmod 440 /etc/sudoers.d/print-dashboard
+Defaults!/usr/sbin/cupsenable, /usr/sbin/cupsdisable, /usr/bin/cancel !use_pty
+ngemis ALL=(root) NOPASSWD: /usr/sbin/cupsenable, /usr/sbin/cupsdisable, /usr/bin/cancel

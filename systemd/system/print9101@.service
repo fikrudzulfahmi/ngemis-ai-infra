@@ -1,0 +1,7 @@
+[Unit]
+Description=Print job port 9101 -> EpsonL120-PS
+[Service]
+ExecStart=/usr/bin/lp -d EpsonL120-PS  -t WindowsJob
+StandardInput=socket
+StandardOutput=null
+User=nobody

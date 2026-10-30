@@ -1,0 +1,4 @@
+# REKONSTRUKSI dari `sudo -l` (file asli /etc/sudoers.d/ngemis-deploy tidak terbaca tanpa sudo).
+# Verifikasi dulu: sudo -l   -> harus muncul baris NOPASSWD dengan daftar yang sama.
+# Pasang: sudo cp ngemis-deploy.sudoers.example /etc/sudoers.d/ngemis-deploy && sudo chmod 440 ...
+ngemis ALL=(root) NOPASSWD: /usr/bin/systemctl, /usr/sbin/nginx, /usr/bin/ln, /usr/bin/tee, /usr/bin/chown, /usr/bin/chmod

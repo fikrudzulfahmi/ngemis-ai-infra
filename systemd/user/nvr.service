@@ -1,0 +1,16 @@
+[Unit]
+Description=NVR live (ringan)
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/ngemis/cctv
+ExecStart=/usr/bin/python3 /home/ngemis/cctv/nvr.py
+# ffmpeg wajib terpasang di host: sudo apt install ffmpeg
+Environment=FFMPEG=/usr/bin/ffmpeg
+Restart=always
+RestartSec=3
+MemoryMax=800M
+CPUQuota=120%
+
+[Install]
+WantedBy=default.target
