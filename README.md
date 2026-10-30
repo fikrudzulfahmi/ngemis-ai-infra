@@ -1,5 +1,6 @@
 # ngemis-ai — Infra & Runbook
 
+> **Panduan instalasi lengkap (urutan 4 repo):** [`PANDUAN-INSTALASI.md`](https://github.com/fikrudzulfahmi/ngemis-ai-infra/blob/main/docs/PANDUAN-INSTALASI.md)
 Konfigurasi host `ngemis-ai` (Ubuntu 24.04, LORD G4x / Core 2 Duo E6400, RAM 4 GB, SSD 240 GB + HDD 1 TB)
 supaya server bisa dibangun ulang dari nol tanpa menebak-nebak.
 
